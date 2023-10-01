@@ -1,0 +1,75 @@
+header, content, aside, footer {
+    text-transform: uppercase;
+}
+.sc-2{
+    text-transform: capitalize;
+}
+:root{
+    --header: #92DFC8;
+    --content:#CAEFF2;
+    --aside:#F2D8CA;
+    --box:#F2F1CA;
+    --footer:#EECBF3;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    background-color: var(--header);
+    padding: 20px;
+    text-align: center;
+}
+.content{
+    float: left;
+    text-align: center;
+    background-color: var(--content);
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.aside{
+    float: right;
+    text-align: center;
+    background-color: var(--aside);
+    width: 30%;
+    height: 500px;
+    padding: 20px;
+}
+.clear-fix{
+    clear: both;
+}
+.sc-2 .box{
+    background-color: var(--box);
+    text-align: center;
+    padding: 20px;
+    width: calc(100%/4 - 10px);
+    height: 150px;
+    margin-right: calc(40px/3);
+    margin-bottom: 10px;
+    float: left;
+}
+.sc-2 .box:nth-child(4){
+    margin-right: 0;
+}
+footer{
+    background-color: var(--footer);
+    text-align: center;
+    padding: 20px;
+}
+@media screen and (max-width: 768px){
+    .content{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+    .sc-2 .box{
+        width: calc(50% - 5px);
+        margin-right: 10px;
+    }
+    .sc-2 .box:nth-child(2){
+        margin-right: 0;
+    }
+}
